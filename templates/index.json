@@ -1,0 +1,11 @@
+{
+  "version": "0.1",
+  "project": "{{PROJECT_NAME}}",
+  "active_decisions": [],
+  "approved_decisions": [],
+  "topics": {},
+  "summaries": {
+    "project": "summaries/project-summary.md"
+  },
+  "last_updated_at": "{{TIMESTAMP}}"
+}

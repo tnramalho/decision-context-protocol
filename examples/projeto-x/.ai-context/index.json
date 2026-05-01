@@ -1,0 +1,23 @@
+{
+  "version": "0.1",
+  "project": "projeto-x",
+  "active_decisions": [
+    {
+      "id": "DEC-001",
+      "title": "Storage inicial do contexto",
+      "file": "decisions/DEC-001-storage-inicial.md",
+      "status": "under_review",
+      "topics": ["architecture", "storage", "github"]
+    }
+  ],
+  "approved_decisions": [],
+  "topics": {
+    "architecture": ["DEC-001"],
+    "storage": ["DEC-001"],
+    "github": ["DEC-001"]
+  },
+  "summaries": {
+    "project": "summaries/project-summary.md"
+  },
+  "last_updated_at": "2026-05-01T23:59:00Z"
+}

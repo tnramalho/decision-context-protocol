@@ -1,0 +1,42 @@
+{
+  "name": "dcp",
+  "version": "0.1.0",
+  "description": "Decision Context Protocol MCP server for GitHub-backed shared project context.",
+  "type": "module",
+  "bin": {
+    "dcp": "dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "dev:http": "DCP_TRANSPORT=http DCP_PORT=5000 tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "start:http": "DCP_TRANSPORT=http DCP_PORT=5000 node dist/index.js",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "test:http": "tsx src/smoke-http.ts"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0",
+    "octokit": "^5.0.5",
+    "zod": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
+  },
+  "keywords": [
+    "mcp",
+    "github",
+    "context",
+    "decisions",
+    "ai"
+  ],
+  "license": "MIT"
+}

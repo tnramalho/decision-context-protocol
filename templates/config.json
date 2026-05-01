@@ -1,0 +1,11 @@
+{
+  "project_name": "{{PROJECT_NAME}}",
+  "default_context_budget_tokens": 2000,
+  "max_files_per_interaction": 3,
+  "require_human_confirmation_for_decisions": true,
+  "auto_capture_worklog": false,
+  "auto_update_snapshot_on_consolidate": true,
+  "repo_mode": "github-api",
+  "active_branch": "main",
+  "inbox_mode": "append-only"
+}
