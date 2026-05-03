@@ -227,6 +227,68 @@ Claude Code MCP docs:
 
 - https://code.claude.com/docs/en/mcp
 
+## Share with a friend
+
+The simplest team setup is:
+
+1. Commit `.mcp.json` to the repository
+2. Each person clones the repo
+3. Each person runs `npm install` and `npm run build`
+4. Each person opens Claude Code from the repository root
+5. Claude Code prompts to approve the project-scoped MCP server from `.mcp.json`
+
+Important:
+
+- Project-scoped MCP servers are stored in `.mcp.json` and are intended to be shared through version control.
+- Claude Code supports environment variable expansion in `.mcp.json`.
+- Relative path mistakes are common, because `command` and `args` resolve from the directory where Claude Code was launched.
+
+Recommended flow for you and your friend:
+
+```bash
+git clone git@github.com:tnramalho/decision-context-protocol.git
+cd decision-context-protocol
+npm install
+npm run build
+claude
+```
+
+Then, inside Claude Code:
+
+- run `/mcp`
+- approve the `dcp` server from `.mcp.json`
+
+If someone rejected the project-scoped server earlier, reset the choice with:
+
+```bash
+claude mcp reset-project-choices
+```
+
+### More reliable local install
+
+This repo also includes a helper script that registers the server in local scope with an absolute path:
+
+```bash
+./scripts/setup-claude-mcp.sh
+```
+
+That is usually the most reliable choice for day-to-day use, because it avoids relative path issues.
+
+Your friend can do the same after cloning the repository.
+
+### Credentials per person
+
+Do not commit personal credentials.
+
+Each person should set their own environment locally before launching Claude Code when using `github-api`:
+
+```bash
+export GITHUB_TOKEN=seu_token
+claude
+```
+
+If you want to use the `github-mcp` backend instead, each person can set their own `DCP_GITHUB_MCP_*` variables locally.
+
 ## Basic local tests
 
 Health check:

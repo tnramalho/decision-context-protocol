@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "dcp": {
+      "type": "stdio",
+      "command": "${DCP_NODE_PATH:-node}",
+      "args": [
+        "${PWD}/dist/index.js"
+      ],
+      "env": {
+        "DCP_TRANSPORT": "stdio",
+        "DCP_REPOSITORY_MODE": "${DCP_REPOSITORY_MODE:-auto}",
+        "GITHUB_TOKEN": "${GITHUB_TOKEN:-}",
+        "DCP_GITHUB_MCP_TRANSPORT": "${DCP_GITHUB_MCP_TRANSPORT:-}",
+        "DCP_GITHUB_MCP_COMMAND": "${DCP_GITHUB_MCP_COMMAND:-}",
+        "DCP_GITHUB_MCP_ARGS": "${DCP_GITHUB_MCP_ARGS:-}",
+        "DCP_GITHUB_MCP_ENV": "${DCP_GITHUB_MCP_ENV:-}",
+        "DCP_GITHUB_MCP_URL": "${DCP_GITHUB_MCP_URL:-}",
+        "DCP_GITHUB_MCP_AUTH_TOKEN": "${DCP_GITHUB_MCP_AUTH_TOKEN:-}"
+      }
+    }
+  }
+}
